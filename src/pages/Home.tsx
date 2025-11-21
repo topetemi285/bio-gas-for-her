@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -35,10 +35,10 @@ const Home = () => {
           </p>
           <div className="flex gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
-              <a href="/register">Get Started</a>
+              <Link to="/register">Get Started</Link>
             </Button>
             <Button size="lg" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20" asChild>
-              <a href="/login">Login</a>
+              <Link to="/login">Login</Link>
             </Button>
           </div>
         </div>
@@ -112,7 +112,7 @@ const Home = () => {
             Join thousands of buyers and sellers in our thriving marketplace
           </p>
           <Button size="lg" className="gradient-hero" asChild>
-            <a href="/register">Create Your Account</a>
+            <Link to="/register">Create Your Account</Link>
           </Button>
         </div>
       </section>
