@@ -1,121 +1,172 @@
-import { useEffect } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import { useAuth } from '@/contexts/AuthContext';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import Navbar from '@/components/Navbar';
-import { ShoppingBag, Store, MessageCircle, Star } from 'lucide-react';
+import SiteNavbar from '@/components/SiteNavbar';
+import SiteFooter from '@/components/SiteFooter';
+import { Flame, Leaf, Heart, Users, TreePine, Wind, ArrowRight } from 'lucide-react';
+import heroBg from '@/assets/hero-bg.jpg';
+import problemImg from '@/assets/problem.jpg';
+import solutionImg from '@/assets/solution.jpg';
+
+const stats = [
+  { value: '3B+', label: 'People cook with polluting fuels globally' },
+  { value: '4M', label: 'Deaths annually from indoor air pollution' },
+  { value: '70%', label: 'Firewood collected by women & girls' },
+  { value: '40%', label: 'Less time for education & earning' },
+];
+
+const sdgs = [
+  { icon: Heart, title: 'Good Health', desc: 'Eliminating harmful smoke exposure for families' },
+  { icon: Users, title: 'Gender Equality', desc: 'Freeing women from firewood collection burden' },
+  { icon: Flame, title: 'Clean Energy', desc: 'Affordable, renewable biogas for cooking' },
+  { icon: TreePine, title: 'Climate Action', desc: 'Reducing deforestation and carbon emissions' },
+  { icon: Wind, title: 'Sustainable Agriculture', desc: 'Biofertilizer for improved crop yields' },
+  { icon: Leaf, title: 'Life on Land', desc: 'Protecting forests and biodiversity' },
+];
 
 const Home = () => {
-  const { user } = useAuth();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (user) {
-      if (user.role === 'seller') {
-        navigate('/seller/dashboard');
-      } else {
-        navigate('/products');
-      }
-    }
-  }, [user, navigate]);
-
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
-      
-      {/* Hero Section */}
-      <section className="gradient-hero py-20 text-white">
-        <div className="container text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Your Marketplace,<br />Your Way
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Connect buyers and sellers in a seamless, modern marketplace experience
-          </p>
-          <div className="flex gap-4 justify-center">
-            <Button size="lg" variant="secondary" asChild>
-              <Link to="/register">Get Started</Link>
-            </Button>
-            <Button size="lg" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20" asChild>
-              <Link to="/login">Login</Link>
-            </Button>
+      <SiteNavbar />
+
+      {/* Hero */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={heroBg} alt="Biogas digester in rural Nigeria" className="w-full h-full object-cover" width={1920} height={1080} />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/60 to-foreground/30" />
+        </div>
+        <div className="relative container py-24 md:py-36">
+          <div className="max-w-2xl text-primary-foreground">
+            <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-secondary text-secondary-foreground mb-4" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              IFRC Solferino Academy 2024
+            </span>
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+              Biogas For Her
+            </h1>
+            <p className="text-lg md:text-xl mb-8 text-primary-foreground/90 leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              Empowering rural Nigerian women and girls with clean biogas energy — ending the cycle of firewood collection, smoke inhalation, and environmental destruction.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button size="lg" className="gradient-warm text-secondary-foreground font-semibold" asChild>
+                <a href="https://www.gofundme.com" target="_blank" rel="noopener noreferrer">
+                  Support Our Mission
+                </a>
+              </Button>
+              <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20" asChild>
+                <Link to="/about">
+                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Features */}
+      {/* Stats */}
+      <section className="py-16 bg-accent">
+        <div className="container">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {stats.map((s, i) => (
+              <div key={i} className="text-center">
+                <p className="text-3xl md:text-4xl font-bold text-primary">{s.value}</p>
+                <p className="text-sm text-muted-foreground mt-1" style={{ fontFamily: "'DM Sans', sans-serif" }}>{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* The Problem */}
       <section className="py-20">
         <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Everything You Need
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <ShoppingBag className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2">Browse Products</h3>
-                <p className="text-muted-foreground text-sm">
-                  Discover amazing products from verified sellers
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-sm font-semibold text-secondary uppercase tracking-wider" style={{ fontFamily: "'DM Sans', sans-serif" }}>The Problem</span>
+              <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6">A Daily Burden That Steals Futures</h2>
+              <div className="space-y-4 text-muted-foreground" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                <p>
+                  In many rural communities across Nigeria, women and children are saddled with the daily burden of collecting and carrying heavy loads of firewood, sacrificing their safety, time, and health just to cook a meal.
                 </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
-                  <Store className="h-6 w-6 text-secondary" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2">Sell Your Products</h3>
-                <p className="text-muted-foreground text-sm">
-                  Easy-to-use dashboard for managing your inventory
+                <p>
+                  This physically exhausting task limits their time for education, productivity, and personal well-being. Beyond this, firewood use exposes them to severe health risks from indoor air pollution and contributes significantly to deforestation and environmental degradation.
                 </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 rounded-full bg-success/10 flex items-center justify-center mx-auto mb-4">
-                  <MessageCircle className="h-6 w-6 text-success" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2">Real-time Chat</h3>
-                <p className="text-muted-foreground text-sm">
-                  Connect directly with buyers and sellers instantly
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 rounded-full bg-accent/30 flex items-center justify-center mx-auto mb-4">
-                  <Star className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2">Rate & Review</h3>
-                <p className="text-muted-foreground text-sm">
-                  Share feedback and build trust in the community
-                </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img src={problemImg} alt="Woman carrying firewood" className="w-full h-auto object-cover" loading="lazy" width={1024} height={768} />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-accent/20">
-        <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of buyers and sellers in our thriving marketplace
-          </p>
-          <Button size="lg" className="gradient-hero" asChild>
-            <Link to="/register">Create Your Account</Link>
-          </Button>
+      {/* The Solution */}
+      <section className="py-20 bg-muted/50">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1 rounded-2xl overflow-hidden shadow-lg">
+              <img src={solutionImg} alt="Biogas solution in action" className="w-full h-auto object-cover" loading="lazy" width={1024} height={768} />
+            </div>
+            <div className="order-1 md:order-2">
+              <span className="text-sm font-semibold text-primary uppercase tracking-wider" style={{ fontFamily: "'DM Sans', sans-serif" }}>Our Solution</span>
+              <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6">Clean Energy, Empowered Lives</h2>
+              <div className="space-y-4 text-muted-foreground" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                <p>
+                  <strong className="text-foreground">Biogas For Her</strong> provides rural women and families with access to renewable energy through biogas technology — converting organic waste into clean cooking fuel and nutrient-rich biofertilizer.
+                </p>
+                <p>
+                  Designed during the IFRC Solferino Limitless Youth Innovation Academy 2024, our solution is born from firsthand experience with the burdens of firewood collection and the health effects of smoke inhalation.
+                </p>
+              </div>
+              <Button className="mt-6 gradient-hero text-primary-foreground" asChild>
+                <Link to="/impact">See Our Impact <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
+
+      {/* SDGs */}
+      <section className="py-20">
+        <div className="container text-center">
+          <span className="text-sm font-semibold text-secondary uppercase tracking-wider" style={{ fontFamily: "'DM Sans', sans-serif" }}>Aligned With Global Goals</span>
+          <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-12">Sustainable Development Impact</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {sdgs.map((s, i) => (
+              <Card key={i} className="text-left hover:shadow-md transition-shadow">
+                <CardContent className="p-6">
+                  <div className="w-11 h-11 rounded-lg bg-accent flex items-center justify-center mb-4">
+                    <s.icon className="h-5 w-5 text-accent-foreground" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-1">{s.title}</h3>
+                  <p className="text-sm text-muted-foreground" style={{ fontFamily: "'DM Sans', sans-serif" }}>{s.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 gradient-hero">
+        <div className="container text-center text-primary-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Our Journey</h2>
+          <p className="text-lg max-w-2xl mx-auto mb-8 text-primary-foreground/90" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+            A future defined by well-being, empowered women, and environmental sustainability is what we envision. Help us scale this solution across more communities.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Button size="lg" className="gradient-warm text-secondary-foreground font-semibold" asChild>
+              <a href="https://www.gofundme.com" target="_blank" rel="noopener noreferrer">
+                Donate Now
+              </a>
+            </Button>
+            <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20" asChild>
+              <Link to="/contact">Get In Touch</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <SiteFooter />
     </div>
   );
 };
