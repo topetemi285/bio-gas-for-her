@@ -46,7 +46,7 @@ const Contact = () => {
                   <Mail className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <a href="mailto:biogasforher@gmail.com" className="text-sm text-primary hover:underline" style={{ fontFamily: "'DM Sans', sans-serif" }}>biogasforher@gmail.com</a>
+                    <a href="mailto:support@biogasforher.com" className="text-sm text-primary hover:underline" style={{ fontFamily: "'DM Sans', sans-serif" }}>support@biogasforher.com</a>
                   </div>
                 </CardContent>
               </Card>
@@ -85,7 +85,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <Label htmlFor="email">Email</Label>
-                      <Input id="email" type="email" placeholder="you@example.com" required />
+                      <Input id="email" type="email" placeholder="support@biogasforher.com" required />
                     </div>
                   </div>
                   <div>

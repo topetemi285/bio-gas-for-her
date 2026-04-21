@@ -2,7 +2,9 @@ import SiteNavbar from '@/components/SiteNavbar';
 import SiteFooter from '@/components/SiteFooter';
 import { Card, CardContent } from '@/components/ui/card';
 import { TestTube, Settings, TrendingUp, Handshake, CheckCircle } from 'lucide-react';
-import biospark from '@/assets/biospark.jpeg';
+import biospark from '@/assets/active2.jpeg';
+import distributionImg from '@/assets/stove-distribution.jpg';
+import setupImg from '@/assets/technical-setup.jpeg';
 
 const timeline = [
   { year: '2024', title: 'Concept & Initial Prototype', icon: TestTube, desc: 'Developed the foundational concept and built the first working biogas prototype within the Limitless program.' },
@@ -53,8 +55,18 @@ const Impact = () => {
                 </div>
               </div>
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img src={biospark} alt="Biogas System Prototype" className="w-full h-auto object-cover" />
+            <div className="grid grid-cols-2 gap-4">
+              <div className="rounded-2xl overflow-hidden shadow-lg h-full">
+                <img src={biospark} alt="Biogas System Prototype" className="w-full h-full object-cover" />
+              </div>
+              <div className="grid grid-rows-2 gap-4">
+                <div className="rounded-2xl overflow-hidden shadow-lg">
+                  <img src={distributionImg} alt="Stove Distribution" className="w-full h-full object-cover" />
+                </div>
+                <div className="rounded-2xl overflow-hidden shadow-lg">
+                  <img src={setupImg} alt="Technical Setup" className="w-full h-full object-cover" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

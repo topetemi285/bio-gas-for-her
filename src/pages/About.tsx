@@ -2,6 +2,7 @@ import SiteNavbar from '@/components/SiteNavbar';
 import SiteFooter from '@/components/SiteFooter';
 import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle } from 'lucide-react';
+import teamImg from '@/assets/biogas-stove-blue-flame.jpg';
 
 const timeline = [
   { year: '2024', title: 'IFRC Solferino Academy', desc: 'Selected for the Limitless Youth Innovation Academy and designed the Biogas For Her solution.' },
@@ -24,18 +25,25 @@ const About = () => (
     </section>
 
     <section className="py-20">
-      <div className="container max-w-3xl">
-        <h2 className="text-3xl font-bold mb-6">Our Story</h2>
-        <div className="space-y-4 text-muted-foreground leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-          <p>
-            As youths who grew up within the struggle of firewood collection, watching our mothers and sisters spend hours each day in the bush, risking snake bites, back injuries, and smoke-filled kitchens, we knew something had to change.
-          </p>
-          <p>
-            This is what inspired <strong className="text-foreground">Biogas For Her</strong>, a clean bioenergy initiative we designed during our participation in the IFRC Solferino Limitless Youth Innovation Academy 2024.
-          </p>
-          <p>
-            Our solution empowers women and girls in pilot communities by providing access to renewable energy through biogas technology, while also promoting sustainable agriculture through biofertilizer production.
-          </p>
+      <div className="container">
+        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          <div>
+            <h2 className="text-3xl font-bold mb-6">Our Story</h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              <p>
+                As youths who grew up within the struggle of firewood collection, watching our mothers and sisters spend hours each day in the bush, risking snake bites, back injuries, and smoke-filled kitchens, we knew something had to change.
+              </p>
+              <p>
+                This is what inspired <strong className="text-foreground">Biogas For Her</strong>, a clean bioenergy initiative we designed during our participation in the IFRC Solferino Limitless Youth Innovation Academy 2024.
+              </p>
+              <p>
+                Our solution empowers women and girls in pilot communities by providing access to renewable energy through biogas technology, while also promoting sustainable agriculture through biofertilizer production.
+              </p>
+            </div>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-xl">
+            <img src={teamImg} alt="Biogas For Her team working on the system" className="w-full h-auto object-cover" />
+          </div>
         </div>
       </div>
     </section>

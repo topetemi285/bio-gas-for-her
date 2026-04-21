@@ -28,7 +28,7 @@ const SiteFooter = () => (
           <div className="flex flex-col gap-2">
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-primary transition-colors">LinkedIn</a>
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-primary transition-colors">Instagram</a>
-            <a href="mailto:biogasforher@gmail.com" className="text-sm hover:text-primary transition-colors">biogasforher@gmail.com</a>
+            <a href="mailto:support@biogasforher.com" className="text-sm hover:text-primary transition-colors">support@biogasforher.com</a>
           </div>
         </div>
       </div>

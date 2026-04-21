@@ -5,13 +5,16 @@ import SiteNavbar from '@/components/SiteNavbar';
 import SiteFooter from '@/components/SiteFooter';
 import { Flame, Leaf, Heart, Users, TreePine, Wind, ArrowRight } from 'lucide-react';
 import heroBg from '@/assets/hero-bg.jpg';
-import problemImg from '@/assets/problem.jpg';
-import solutionImg from '@/assets/solution.jpg';
-import biospark from '@/assets/biospark.jpeg';
-import biospark1 from '@/assets/biospark1.jpeg';
-import biospark2 from '@/assets/biospark2.jpeg';
-import biospark3 from '@/assets/biospark3.jpeg';
-import biospark4 from '@/assets/biospark4.jpeg';
+import problemImg from '@/assets/problem.jpeg';
+import solutionImg from '@/assets/solution.jpeg';
+import impact1 from '@/assets/impact.jpeg';
+import impact2 from '@/assets/impact2.jpeg';
+import impact3 from '@/assets/impact3.jpeg';
+import impact4 from '@/assets/impact4.jpeg';
+import active1 from '@/assets/active.jpeg';
+import active2 from '@/assets/active2.jpeg';
+import cookingResult from '@/assets/cooking-result.jpeg';
+import fieldWork1 from '@/assets/field-work-1.jpeg';
 
 const stats = [
   { value: '70%+', label: 'Nigerian households rely on firewood' },
@@ -139,12 +142,39 @@ const Home = () => {
             <span className="text-sm font-semibold text-secondary uppercase tracking-wider" style={{ fontFamily: "'DM Sans', sans-serif" }}>Field Work & Results</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2">See Our Impact in Action</h2>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-            <img src={biospark1} alt="Biogas For Her Field Work" className="rounded-xl w-full h-64 object-cover shadow-sm hover:shadow-md transition-shadow" />
-            <img src={biospark2} alt="Biogas Biofertilizer" className="rounded-xl w-full h-64 object-cover shadow-sm hover:shadow-md transition-shadow" />
-            <img src={biospark3} alt="Community Engagement" className="rounded-xl w-full h-64 object-cover shadow-sm hover:shadow-md transition-shadow" />
-            <img src={biospark4} alt="Impact on Families" className="rounded-xl w-full h-64 lg:col-span-2 object-cover shadow-sm hover:shadow-md transition-shadow" />
-            <img src={biospark} alt="Biogas For Her Digester Installation" className="rounded-xl w-full h-64 object-cover shadow-sm hover:shadow-md transition-shadow" />
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all">
+              <img src={active1} alt="Biogas System Installation" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
+            </div>
+            <div className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all">
+              <img src={active2} alt="Completed Digester Prototype" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
+            </div>
+            <div className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all">
+              <img src={impact1} alt="Community Engagement" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
+            </div>
+            <div className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all">
+              <img src={impact2} alt="Technical Explanation" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
+            </div>
+            <div className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all">
+              <img src={impact3} alt="Community Support" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
+            </div>
+            <div className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all">
+              <img src={impact4} alt="Youth and Community" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
+            </div>
+            <div className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all">
+              <img src={cookingResult} alt="Clean Biogas Cooking" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
+            </div>
+            <div className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all">
+              <img src={fieldWork1} alt="Field Research and Testing" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
+            </div>
           </div>
         </div>
       </section>
