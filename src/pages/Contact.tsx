@@ -18,7 +18,7 @@ const Contact = () => {
     setSending(true);
     setTimeout(() => {
       setSending(false);
-      toast({ title: 'Message sent!', description: 'Thank you for reaching out. We will get back to you soon.'});
+      toast({ title: 'Message sent!', description: 'Thank you for reaching out. We will get back to you soon.' });
       (e.target as HTMLFormElement).reset();
     }, 1200);
   };
@@ -31,7 +31,7 @@ const Contact = () => {
         <div className="container">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h1>
           <p className="text-lg max-w-2xl text-primary-foreground/90" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-            Whether you want to support, partner, or just learn more — we'd love to hear from you.
+            Whether you want to support, partner, or just learn more, we'd love to hear from you.
           </p>
         </div>
       </section>

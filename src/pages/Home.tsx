@@ -118,7 +118,7 @@ const Home = () => {
               <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6">Clean Energy, Empowered Lives</h2>
               <div className="space-y-4 text-muted-foreground" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                 <p>
-                  <strong className="text-foreground">Biogas For Her</strong> provides rural women and families with access to renewable energy through our upgraded biodigester prototype — converting kitchen and animal waste into clean biogas for cooking and nutrient-rich biofertilizer for farming.
+                  <strong className="text-foreground">Biogas For Her</strong> provides rural women and families with access to renewable energy through our upgraded biodigester prototype, converting kitchen and animal waste into clean biogas for cooking and nutrient-rich biofertilizer for farming.
                 </p>
                 <p>
                   Our latest iteration features an upgraded gas collector using a tyre tube for better pressure and easy gas level detection. This community-led innovation was developed and fine-tuned during the IFRC Solferino Academy program.
@@ -179,7 +179,7 @@ const Home = () => {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button size="lg" className="gradient-warm text-secondary-foreground font-semibold" asChild>
-              <a href="https://www.gofundme.com" target="_blank" rel="noopener noreferrer">
+              <a href="/contact" target="_blank" rel="noopener noreferrer">
                 Donate Now
               </a>
             </Button>

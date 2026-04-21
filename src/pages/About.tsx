@@ -28,7 +28,7 @@ const About = () => (
         <h2 className="text-3xl font-bold mb-6">Our Story</h2>
         <div className="space-y-4 text-muted-foreground leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
           <p>
-            As youths who grew up within the struggle of firewood collection, watching our mothers and sisters spend hours each day in the bush — risking snake bites, back injuries, and smoke-filled kitchens — we knew something had to change.
+            As youths who grew up within the struggle of firewood collection, watching our mothers and sisters spend hours each day in the bush, risking snake bites, back injuries, and smoke-filled kitchens, we knew something had to change.
           </p>
           <p>
             This is what inspired <strong className="text-foreground">Biogas For Her</strong>, a clean bioenergy initiative we designed during our participation in the IFRC Solferino Limitless Youth Innovation Academy 2024.
