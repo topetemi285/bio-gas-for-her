@@ -18,7 +18,7 @@ const About = () => (
       <div className="container">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">About Biogas For Her</h1>
         <p className="text-lg max-w-2xl text-primary-foreground/90" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-          Born from lived experience, built with purpose — we are youth changemakers from rural Nigeria determined to transform lives through clean energy.
+          Born from lived experience, built with purpose, we are youth changemakers from rural Nigeria determined to transform lives through clean energy.
         </p>
       </div>
     </section>
