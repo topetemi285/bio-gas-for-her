@@ -38,7 +38,10 @@ const SiteNavbar = () => {
             </Button>
           ))}
           <Button size="sm" className="ml-3 gradient-warm text-secondary-foreground" asChild>
-            <a href="https://www.gofundme.com" target="_blank" rel="noopener noreferrer">
+            <a href=
+              ""
+              // https://www.gofundme.com 
+              target="_blank" rel="noopener noreferrer">
               Support Us
             </a>
           </Button>
@@ -66,7 +69,10 @@ const SiteNavbar = () => {
               </Button>
             ))}
             <Button className="gradient-warm text-secondary-foreground" asChild onClick={() => setOpen(false)}>
-              <a href="https://www.gofundme.com" target="_blank" rel="noopener noreferrer">
+              <a href=
+                ""
+                // https://www.gofundme.com 
+                target="_blank" rel="noopener noreferrer">
                 Support Us
               </a>
             </Button>

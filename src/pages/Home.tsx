@@ -7,12 +7,17 @@ import { Flame, Leaf, Heart, Users, TreePine, Wind, ArrowRight } from 'lucide-re
 import heroBg from '@/assets/hero-bg.jpg';
 import problemImg from '@/assets/problem.jpg';
 import solutionImg from '@/assets/solution.jpg';
+import biospark from '@/assets/biospark.jpeg';
+import biospark1 from '@/assets/biospark1.jpeg';
+import biospark2 from '@/assets/biospark2.jpeg';
+import biospark3 from '@/assets/biospark3.jpeg';
+import biospark4 from '@/assets/biospark4.jpeg';
 
 const stats = [
-  { value: '3B+', label: 'People cook with polluting fuels globally' },
-  { value: '4M', label: 'Deaths annually from indoor air pollution' },
-  { value: '70%', label: 'Firewood collected by women & girls' },
-  { value: '40%', label: 'Less time for education & earning' },
+  { value: '70%+', label: 'Nigerian households rely on firewood' },
+  { value: '3.8M', label: 'Annual deaths from household air pollution' },
+  { value: '25+', label: 'Target households for 2025 pilot' },
+  { value: '10', label: 'Communities in Bauchi, Plateau & Benue' },
 ];
 
 const sdgs = [
@@ -37,9 +42,9 @@ const Home = () => {
         </div>
         <div className="relative container py-24 md:py-36">
           <div className="max-w-2xl text-primary-foreground">
-            <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-secondary text-secondary-foreground mb-4" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-              IFRC Solferino Academy 2024
-            </span>
+            {/* <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-secondary text-secondary-foreground mb-4" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              Prepared by Nandom Mampak & Atsuku Mercy • July 2025
+            </span> */}
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
               Biogas For Her
             </h1>
@@ -48,7 +53,9 @@ const Home = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="gradient-warm text-secondary-foreground font-semibold" asChild>
-                <a href="https://www.gofundme.com" target="_blank" rel="noopener noreferrer">
+                <a href="/contact"
+                  // "https://www.gofundme.com" 
+                  target="_blank" rel="noopener noreferrer">
                   Support Our Mission
                 </a>
               </Button>
@@ -111,16 +118,33 @@ const Home = () => {
               <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6">Clean Energy, Empowered Lives</h2>
               <div className="space-y-4 text-muted-foreground" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                 <p>
-                  <strong className="text-foreground">Biogas For Her</strong> provides rural women and families with access to renewable energy through biogas technology — converting organic waste into clean cooking fuel and nutrient-rich biofertilizer.
+                  <strong className="text-foreground">Biogas For Her</strong> provides rural women and families with access to renewable energy through our upgraded biodigester prototype — converting kitchen and animal waste into clean biogas for cooking and nutrient-rich biofertilizer for farming.
                 </p>
                 <p>
-                  Designed during the IFRC Solferino Limitless Youth Innovation Academy 2024, our solution is born from firsthand experience with the burdens of firewood collection and the health effects of smoke inhalation.
+                  Our latest iteration features an upgraded gas collector using a tyre tube for better pressure and easy gas level detection. This community-led innovation was developed and fine-tuned during the IFRC Solferino Academy program.
                 </p>
               </div>
               <Button className="mt-6 gradient-hero text-primary-foreground" asChild>
                 <Link to="/impact">See Our Impact <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Impact Gallery */}
+      <section className="py-20 bg-background">
+        <div className="container">
+          <div className="text-center mb-12">
+            <span className="text-sm font-semibold text-secondary uppercase tracking-wider" style={{ fontFamily: "'DM Sans', sans-serif" }}>Field Work & Results</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2">See Our Impact in Action</h2>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+            <img src={biospark1} alt="Biogas For Her Field Work" className="rounded-xl w-full h-64 object-cover shadow-sm hover:shadow-md transition-shadow" />
+            <img src={biospark2} alt="Biogas Biofertilizer" className="rounded-xl w-full h-64 object-cover shadow-sm hover:shadow-md transition-shadow" />
+            <img src={biospark3} alt="Community Engagement" className="rounded-xl w-full h-64 object-cover shadow-sm hover:shadow-md transition-shadow" />
+            <img src={biospark4} alt="Impact on Families" className="rounded-xl w-full h-64 lg:col-span-2 object-cover shadow-sm hover:shadow-md transition-shadow" />
+            <img src={biospark} alt="Biogas For Her Digester Installation" className="rounded-xl w-full h-64 object-cover shadow-sm hover:shadow-md transition-shadow" />
           </div>
         </div>
       </section>

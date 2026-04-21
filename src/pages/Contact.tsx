@@ -18,7 +18,7 @@ const Contact = () => {
     setSending(true);
     setTimeout(() => {
       setSending(false);
-      toast({ title: 'Message sent!', description: 'Thank you for reaching out. We will get back to you soon.' });
+      toast({ title: 'Message sent!', description: 'Thank you for reaching out. We will get back to you soon.'});
       (e.target as HTMLFormElement).reset();
     }, 1200);
   };

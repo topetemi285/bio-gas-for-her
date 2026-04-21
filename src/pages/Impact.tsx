@@ -1,80 +1,99 @@
 import SiteNavbar from '@/components/SiteNavbar';
 import SiteFooter from '@/components/SiteFooter';
 import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
-import { Clock, Heart, TreePine, Sprout, Users, Flame } from 'lucide-react';
+import { TestTube, Settings, TrendingUp, Handshake, CheckCircle } from 'lucide-react';
+import biospark from '@/assets/biospark.jpeg';
 
-const impacts = [
-  { icon: Clock, value: '4+ hrs', label: 'Saved daily per household', desc: 'Women reclaim hours previously spent collecting firewood' },
-  { icon: Heart, value: '100%', label: 'Reduced smoke exposure', desc: 'Clean biogas cooking eliminates harmful indoor air pollution' },
-  { icon: TreePine, value: '2 tons', label: 'CO₂ reduced per digester/year', desc: 'Each unit significantly cuts carbon emissions' },
-  { icon: Sprout, value: '200kg', label: 'Biofertilizer produced monthly', desc: 'Organic fertilizer boosts crop yields sustainably' },
-  { icon: Users, value: '50+', label: 'Families in pilot communities', desc: 'Growing impact across rural Nigerian communities' },
-  { icon: Flame, value: '3 meals', label: 'Cooked daily on biogas', desc: 'Reliable clean energy for everyday cooking needs' },
+const timeline = [
+  { year: '2024', title: 'Concept & Initial Prototype', icon: TestTube, desc: 'Developed the foundational concept and built the first working biogas prototype within the Limitless program.' },
+  { year: 'Early 2025', title: 'Community Feedback', icon: Handshake, desc: 'Engaged with rural communities to test the prototype, gathering crucial feedback on usability and needs.' },
+  { year: 'Mid 2025', title: 'Design Iteration', icon: Settings, desc: 'Upgraded the system based on feedback, introducing a tyre tube collector to improve gas pressure and monitoring.' },
+  { year: 'Aug - Nov 2025', title: 'Implementation Phase', icon: TrendingUp, desc: 'Fabricating and installing the upgraded prototype in 20-25 large households across targeted communities.' }
 ];
 
-const Impact = () => (
-  <div className="min-h-screen bg-background">
-    <SiteNavbar />
+const Impact = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <SiteNavbar />
 
-    <section className="py-20 gradient-hero text-primary-foreground">
-      <div className="container">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Impact</h1>
-        <p className="text-lg max-w-2xl text-primary-foreground/90" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-          Every biogas digester installed is a step toward healthier families, empowered women, and a greener planet.
-        </p>
-      </div>
-    </section>
+      <section className="py-20 gradient-hero text-primary-foreground">
+        <div className="container">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Impact & Roadmap</h1>
+          <p className="text-lg max-w-2xl text-primary-foreground/90" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+            Tracking our progress as we bring sustainable energy solutions to rural Nigeria. This roadmap outlines our journey as IFRC Solferino Academy finalists.
+          </p>
+        </div>
+      </section>
 
-    <section className="py-20">
-      <div className="container">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {impacts.map((item, i) => (
-            <Card key={i} className="hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <div className="w-11 h-11 rounded-lg bg-accent flex items-center justify-center mb-4">
-                  <item.icon className="h-5 w-5 text-accent-foreground" />
+      <section className="py-20">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold mb-6">Targeting Real Change</h2>
+              <div className="space-y-4 text-muted-foreground" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                <p>
+                  Our goal for the upcoming implementation phase (August - November 2025) is to deploy the upgraded Biogas For Her systems across rural communities in Bauchi, Plateau, and Benue states.
+                </p>
+                <div className="bg-accent/50 p-6 rounded-xl mt-6">
+                  <h3 className="font-semibold text-foreground mb-3 font-sans">Expected Phase 1 Outcomes:</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                      <span><strong>25 Households</strong> equipped with digesters</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                      <span><strong>Zero</strong> firewood collection hours for impacted women</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                      <span>Access to free, nutrient-rich biofertilizer</span>
+                    </li>
+                  </ul>
                 </div>
-                <p className="text-3xl font-bold text-primary">{item.value}</p>
-                <p className="font-semibold mt-1">{item.label}</p>
-                <p className="text-sm text-muted-foreground mt-2" style={{ fontFamily: "'DM Sans', sans-serif" }}>{item.desc}</p>
-              </CardContent>
-            </Card>
-          ))}
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img src={biospark} alt="Biogas System Prototype" className="w-full h-auto object-cover" />
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section className="py-20 bg-muted/50">
-      <div className="container max-w-3xl text-center">
-        <h2 className="text-3xl font-bold mb-6">What Communities Say</h2>
-        <blockquote className="text-xl italic text-muted-foreground border-l-4 border-primary pl-6 text-left" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-          "Since the biogas system came, I no longer wake at 4am to search for firewood. My daughter now has time to study, and my kitchen no longer fills with smoke. This has changed our lives."
-        </blockquote>
-        <p className="mt-4 text-sm font-semibold text-foreground" style={{ fontFamily: "'DM Sans', sans-serif" }}>— Community Member, Pilot Village</p>
-      </div>
-    </section>
-
-    <section className="py-16 gradient-hero text-primary-foreground text-center">
-      <div className="container">
-        <h2 className="text-3xl font-bold mb-4">Help Us Reach More Communities</h2>
-        <p className="text-lg mb-8 text-primary-foreground/90 max-w-xl mx-auto" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-          Your support can bring clean energy to another family today.
-        </p>
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Button size="lg" className="gradient-warm text-secondary-foreground font-semibold" asChild>
-            <a href="https://www.gofundme.com" target="_blank" rel="noopener noreferrer">Donate Now</a>
-          </Button>
-          <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20" asChild>
-            <Link to="/contact">Partner With Us</Link>
-          </Button>
+      <section className="py-20 bg-muted/50">
+        <div className="container max-w-4xl">
+          <div className="text-center mb-12">
+            <span className="text-sm font-semibold text-secondary uppercase tracking-wider" style={{ fontFamily: "'DM Sans', sans-serif" }}>Implementation Plan</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2">Our Roadmap to 2025</h2>
+          </div>
+          
+          <div className="space-y-8">
+            {timeline.map((item, index) => (
+              <Card key={index} className="relative overflow-hidden hover:shadow-md transition-shadow">
+                <div className="absolute left-0 top-0 bottom-0 w-2 bg-primary" />
+                <CardContent className="p-6 sm:p-8 pl-8 sm:pl-10">
+                  <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
+                    <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center shrink-0">
+                      <item.icon className="h-8 w-8 text-primary" />
+                    </div>
+                    <div>
+                      <div className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-secondary/10 text-secondary mb-2" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                        {item.year}
+                      </div>
+                      <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                      <p className="text-muted-foreground" style={{ fontFamily: "'DM Sans', sans-serif" }}>{item.desc}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <SiteFooter />
-  </div>
-);
+      <SiteFooter />
+    </div>
+  );
+};
 
 export default Impact;
