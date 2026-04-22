@@ -52,7 +52,7 @@ const Home = () => {
               Biogas For Her
             </h1>
             <p className="text-lg md:text-xl mb-8 text-primary-foreground/90 leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-              Empowering rural Nigerian women and girls with clean biogas energy, ending the cycle of firewood collection, smoke inhalation, and environmental destruction.
+              Empowering rural Nigerian women and girls with clean biogas energy, ending the cycle of firewood collection, smoke inhalation, and degradation.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="gradient-warm text-secondary-foreground font-semibold" asChild>
