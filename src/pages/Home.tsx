@@ -144,35 +144,35 @@ const Home = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <div className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all">
-              <img src={active1} alt="Biogas System Installation" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" />
+              <img src={active1} alt="Biogas System Installation" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" width={800} height={600} />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
             </div>
             <div className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all">
-              <img src={active2} alt="Completed Digester Prototype" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" />
+              <img src={active2} alt="Completed Digester Prototype" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" width={800} height={600} />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
             </div>
             <div className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all">
-              <img src={impact1} alt="Community Engagement" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" />
+              <img src={impact1} alt="Community Engagement" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" width={800} height={600} />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
             </div>
             <div className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all">
-              <img src={impact2} alt="Technical Explanation" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" />
+              <img src={impact2} alt="Technical Explanation" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" width={800} height={600} />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
             </div>
             <div className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all">
-              <img src={impact3} alt="Community Support" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" />
+              <img src={impact3} alt="Community Support" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" width={800} height={600} />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
             </div>
             <div className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all">
-              <img src={impact4} alt="Youth and Community" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" />
+              <img src={impact4} alt="Youth and Community" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" width={800} height={600} />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
             </div>
             <div className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all">
-              <img src={cookingResult} alt="Clean Biogas Cooking" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" />
+              <img src={cookingResult} alt="Clean Biogas Cooking" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" width={800} height={600} />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
             </div>
             <div className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all">
-              <img src={fieldWork1} alt="Field Research and Testing" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" />
+              <img src={fieldWork1} alt="Field Research and Testing" className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" width={800} height={600} />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
             </div>
           </div>

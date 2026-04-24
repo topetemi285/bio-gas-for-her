@@ -57,14 +57,14 @@ const Impact = () => {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-2xl overflow-hidden shadow-lg h-full">
-                <img src={biospark} alt="Biogas System Prototype" className="w-full h-full object-cover" />
+                <img src={biospark} alt="Biogas System Prototype" className="w-full h-full object-cover" width={800} height={600} />
               </div>
               <div className="grid grid-rows-2 gap-4">
                 <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <img src={distributionImg} alt="Stove Distribution" className="w-full h-full object-cover" />
+                  <img src={distributionImg} alt="Stove Distribution" className="w-full h-full object-cover" width={800} height={600} />
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <img src={setupImg} alt="Technical Setup" className="w-full h-full object-cover" />
+                  <img src={setupImg} alt="Technical Setup" className="w-full h-full object-cover" width={800} height={600} />
                 </div>
               </div>
             </div>
@@ -78,7 +78,7 @@ const Impact = () => {
             <span className="text-sm font-semibold text-secondary uppercase tracking-wider" style={{ fontFamily: "'DM Sans', sans-serif" }}>Implementation Plan</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2">Our Roadmap to 2025</h2>
           </div>
-          
+
           <div className="space-y-8">
             {timeline.map((item, index) => (
               <Card key={index} className="relative overflow-hidden hover:shadow-md transition-shadow">
